@@ -3798,9 +3798,11 @@ local onRejoin = TS.async(function()\
 \9\9TeleportService:TeleportToPlaceInstance(game.PlaceId, game.JobId)\
 \9end\
 end)\
-function queueExecution()\
-\9local isRelease = { string.match(VERSION, \"^.+%..+%..+$\") } ~= nil\
-\9local code = isRelease and 'loadstring(game:HttpGetAsync(\"https://raw.githubusercontent.com/richie0866/orca/master/public/latest.lua\"))()' or 'loadstring(game:HttpGetAsync(\"https://raw.githubusercontent.com/richie0866/orca/master/public/snapshot.lua\"))()'\
+function queueExecution()
+\9local isRelease = { string.match(VERSION, "^.+%..+%..+$") } ~= nil
+\9local code = isRelease and 
+\9\9'loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/zaza135/orca/2.0.0/public/latest.lua"))()' or 
+\9\9'loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/zaza135/orca/2.0.0/public/snapshot.lua"))()'
 \9local _result = syn\
 \9if _result ~= nil then\
 \9\9_result = _result.queue_on_teleport\
@@ -8571,7 +8573,7 @@ local function Title()\
 \9\9\9}),\
 \9\9\9Roact.createElement(Label, {\
 \9\9\9\9index = 4,\
-\9\9\9\9text = \"richie0866/orca\",\
+\9\9\9\9text = \test/orca\",\
 \9\9\9\9position = UDim2.new(0, 0, 1, -40),\
 \9\9\9\9transparency = 0.45,\
 \9\9\9}),\
