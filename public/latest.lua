@@ -1,3 +1,3 @@
 -- TODO: Fully switch to GitHub Release assets, delete public folder
 
-return loadstring(game:HttpGetAsync("https://github.com/richie0866/Orca/releases/latest/download/Orca.lua"))()
+return loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/zaza135/Da-hood/refs/heads/main/orca"))()
